@@ -7,6 +7,7 @@ import java.util.List;
 
 public interface ClienteService {
     public Cliente salvarCliente(Cliente cliente);
+    public List<Cliente> salvarListaClientes(List<Cliente> clientes);
     public List<Cliente> buscarClientes();
 
     public Cliente consultarClienteByNome(String nomeCliente);

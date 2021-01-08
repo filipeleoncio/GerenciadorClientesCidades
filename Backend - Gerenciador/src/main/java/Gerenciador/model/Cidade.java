@@ -10,6 +10,11 @@ public class Cidade {
     @Column(name = "CidadeId")
     private Integer cidadeId;
 
+    @Column(name = "NomeCidade")
+    private String nome;
+
+    private String estado;
+
     public Integer getCidadeId() {
         return cidadeId;
     }
@@ -17,11 +22,6 @@ public class Cidade {
     public void setCidadeId(Integer cidadeId) {
         this.cidadeId = cidadeId;
     }
-
-    @Column(name = "NomeCidade")
-    private String nome;
-
-    private String estado;
 
     public String getNome() {
         return nome;

@@ -37,4 +37,9 @@ public class CidadeResource {
         return cidadeService.salvarCidade(cidade);
     }
 
+    @PostMapping("/salvarLista")
+    public List<Cidade> salvarListaCidades(@RequestBody List<Cidade> cidades){
+        return cidadeService.salvarListaCidades(cidades);
+    }
+
 }

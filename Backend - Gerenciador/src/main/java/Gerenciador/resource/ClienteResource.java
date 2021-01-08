@@ -36,10 +36,13 @@ public class ClienteResource {
     }
 
     @PostMapping
-    public Cliente salvarCliente(@RequestBody Cliente cliente){//, @RequestParam Integer idCidade){
-        //cliente.setCidadeResidente(cidade);
-        //CidadeRepository
+    public Cliente salvarCliente(@RequestBody Cliente cliente){
         return clienteService.salvarCliente(cliente);
+    }
+
+    @PostMapping("/salvarLista")
+    public List<Cliente> salvarListaClientes(@RequestBody List<Cliente> clientes){
+        return clienteService.salvarListaClientes(clientes);
     }
 
     @PutMapping

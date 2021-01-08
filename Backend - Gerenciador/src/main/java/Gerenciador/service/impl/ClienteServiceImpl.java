@@ -3,7 +3,6 @@ package Gerenciador.service.impl;
 import Gerenciador.model.Cliente;
 import Gerenciador.repository.ClienteRepository;
 import Gerenciador.service.ClienteService;
-import com.sun.xml.bind.v2.model.core.ID;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -24,22 +23,31 @@ public class ClienteServiceImpl implements ClienteService {
     }
 
     @Override
+    public List<Cliente> salvarListaClientes(List<Cliente> clientes) {
+        return (List<Cliente>) clienteRepository.saveAll(clientes);
+    }
+
+    @Override
     public List<Cliente> buscarClientes(){
         return clienteRepository.findAll();
     }
 
+    @Override
     public Cliente consultarClienteByNome(String nomeCliente){
         return clienteRepository.findByNome(nomeCliente);
     }
 
+    @Override
     public Cliente consultarClienteByClienteId(Integer idCliente){
         return clienteRepository.findByClienteId(idCliente);
     }
 
+    @Override
     public void removerClienteById(Integer idCliente){
         clienteRepository.deleteById(idCliente);
     }
 
+    @Override
     public Cliente alterarNomeClienteById(Integer idCliente, String novoNome){
         Cliente c = clienteRepository.findByClienteId(idCliente);
         c.setNome(novoNome);

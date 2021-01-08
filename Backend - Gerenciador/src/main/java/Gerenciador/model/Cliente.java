@@ -20,7 +20,7 @@ public class Cliente {
     private Integer idade;
 
     @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name = "cidadeId")//, referencedColumnName = "NomeCidade", updatable = false, insertable = false)
+    @JoinColumn(name = "CidadeId")
     private Cidade cidadeResidente;
 
     public Integer getClienteId() {

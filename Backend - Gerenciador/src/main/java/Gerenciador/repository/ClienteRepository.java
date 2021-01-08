@@ -11,6 +11,4 @@ public interface ClienteRepository extends CrudRepository<Cliente, Integer> {
     public List<Cliente> findAll();
     public Cliente findByNome(String nomeCliente);
     public Cliente findByClienteId(Integer idCliente);
-
-    //public void alterarNomeCliente(Integer idCliente);
 }

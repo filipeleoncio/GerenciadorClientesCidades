@@ -23,6 +23,11 @@ public class CidadeServiceImpl implements CidadeService {
     }
 
     @Override
+    public List<Cidade> salvarListaCidades(List<Cidade> cidades) {
+        return (List<Cidade>) cidadeRepository.saveAll(cidades);
+    }
+
+    @Override
     public List<Cidade> buscarCidades(){
         return cidadeRepository.findAll();
     }

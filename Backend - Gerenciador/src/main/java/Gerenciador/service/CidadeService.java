@@ -6,8 +6,8 @@ import java.util.List;
 
 public interface CidadeService {
     public Cidade salvarCidade(Cidade cidade);
+    public List<Cidade> salvarListaCidades(List<Cidade> cidades);
     public List<Cidade> buscarCidades();
-
     public Cidade consultarCidadeByNome(String nomeCidade);
     public List<Cidade> consultarCidadesByEstado(String nomeEstado);
 }
